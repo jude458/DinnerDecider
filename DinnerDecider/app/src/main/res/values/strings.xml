@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DinnerDecider</string>
+    <string name="action_settings">Settings</string>
+    <string name="chinese">CHINESE</string>
+    <string name="deside">DESIDE!</string>
+    <string name="add_new_food">Add New Food</string>
+    <string name="add_food">ADD FOOD</string>
+    <string name="todo">TODO</string>
+</resources>
