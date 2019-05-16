@@ -66,4 +66,19 @@
     <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
                                           android:id="@+id/guideline2" app:layout_constraintGuide_begin="20dp"
                                           android:orientation="vertical"/>
+    <TextView
+            android:text="@string/design_by_jude_akpofure"
+            android:layout_width="128dp"
+            android:layout_height="15dp"
+            android:id="@+id/textView" android:textSize="10sp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addFoodBtn" android:layout_marginTop="44dp"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="@+id/guideline2"
+            android:layout_marginLeft="8dp" app:layout_constraintHorizontal_bias="0.988"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/DecideBtn"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline3" app:layout_constraintGuide_begin="20dp"
+                                          android:orientation="vertical"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline4" app:layout_constraintGuide_begin="20dp"
+                                          android:orientation="vertical"/>
 </android.support.constraint.ConstraintLayout>
