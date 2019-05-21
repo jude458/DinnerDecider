@@ -2,9 +2,9 @@ package com.example.swooh.Controller
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.swooh.Model.Player
 import com.example.swooh.R
-import com.example.swooh.Utilities.EXTRA_LEAGUE
-import com.example.swooh.Utilities.EXTRA_SKILL
+import com.example.swooh.Utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_finish.*
 
 class FinishActivity : AppCompatActivity() {
@@ -14,12 +14,12 @@ class FinishActivity : AppCompatActivity() {
         setContentView(R.layout.activity_finish)
 
 
-        val league = intent.getStringExtra(EXTRA_LEAGUE)
-        val skills = intent.getStringExtra(EXTRA_SKILL)
+        var player = intent.getParcelableExtra<Player>( EXTRA_PLAYER)
 
-        searchLeague.text = "Looking for a $league $skills League Near You "
+        searchLeague.text = "Looking for a ${player.league}  ${player.skills} League Near You "
 
 
     }
 
 }
+ 

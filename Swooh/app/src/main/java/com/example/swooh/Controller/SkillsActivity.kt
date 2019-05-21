@@ -4,39 +4,38 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.example.swooh.Utilities.EXTRA_LEAGUE
-import com.example.swooh.Utilities.EXTRA_SKILL
+import com.example.swooh.Model.Player
+
 import com.example.swooh.R
+import com.example.swooh.Utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_skills.*
 
 class SkillsActivity : BaseActivity() {
-    var league = ""
-    var skills = ""
+    lateinit var  player : Player
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skills)
-        league = intent.getStringExtra(EXTRA_LEAGUE)
+        player = intent.getParcelableExtra(EXTRA_PLAYER)
     }
 
        fun onBeginnerChecked(view: View){
            ballerSkillBtn.isChecked = false
 
-           skills = "beginner"
+           player.skills = "beginner"
 
        }
 
          fun  onBallerChecked (view: View){
            beginnerSkillBtn.isChecked = false
 
-             skills = "baller"
+             player.skills = "baller"
          }
 
      fun onSkillFinishCkecked(view: View){
-         if( skills != ""){
+         if( player.skills != ""){
              val finshActivity = Intent(this, FinishActivity :: class.java)
-             finshActivity.putExtra(EXTRA_LEAGUE, league)
-             finshActivity.putExtra(EXTRA_SKILL,skills)
+             finshActivity.putExtra(EXTRA_PLAYER,player)
              startActivity(finshActivity)
          }else
              Toast.makeText(this,"Plases Select a Skills",Toast.LENGTH_SHORT).show()
